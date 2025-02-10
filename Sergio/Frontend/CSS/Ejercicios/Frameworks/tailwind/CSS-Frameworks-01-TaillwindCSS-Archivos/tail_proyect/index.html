@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase tailwind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="flex items-center justify-between p-4 bg-gray-100 shadow-sm">
+      <h1 class="font-bold">My portfolio</h1>
+      <nav class="hidden md:flex md:gap-4" id="main-nav">
+        <a href="#" class="hover:text-blue-500">Home</a>
+        <a href="#" class="hover:text-blue-500">About</a>
+        <a href="#" class="hover:text-blue-500">Contact</a>
+      </nav>
+      <button class="block md:hidden" id="mobile-nav-btn">
+        <span class="block w-6 h-[2px] bg-black mb-1"></span>
+        <span class="block w-6 h-[2px] bg-black mb-1"></span>
+        <span class="block w-6 h-[2px] bg-black mb-1"></span>
+      </button>
+    </header>
+    <!-- Hero section -->
+    <section
+      class="flex flex-col md:flex-row items-center justify-around bg-gradient-to-r from-primary to-secondary text-primary-foreground py-12 px-4 gap-4"
+      >
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Welcome to my portfolio
+        </h1>
+        <p class="text-xl mb-6">
+          Hi! I'm a web developer, discover my skills and services
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+          <a
+            class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary"
+            href=""
+            >Get started</a
+          >
+          <a
+            class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary"
+            href=""
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <div>
+        <img
+          src="https://g-23v0bzriklv.vusercontent.net/placeholder.svg"
+          alt="placeholder"
+          class="rounded max-w-xs md:max-w-md"
+        />
+      </div>
+    </section>
+    <!-- About section -->
+    <section
+      class="flex flex-col md:flex-row items-center justify-around bg-muted text-foreground py-12 px-4"
+    >
+      <div>
+        <img
+          src="https://g-23v0bzriklv.vusercontent.net/placeholder.svg"
+          alt="About Image"
+          class="rounded max-w-md"
+        />
+      </div>
+      <div class="max-w-lg">
+        <h2 class="text-3xl font-bold mb-4">About Us</h2>
+        <p class="mb-6">
+          We are a team of dedicated professionals, ready to do whatever it
+          takes to make your business grow.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="bg-card p-6 rounded shadow-md text-center flex-1">
+            <h3 class="text-4xl font-bold">150+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="bg-card p-6 rounded shadow-md text-center flex-1">
+            <h3 class="text-4xl font-bold">120</h3>
+            <p>Satisfied Clients</p>
+          </div>
+          <div class="bg-card p-6 rounded shadow-md text-center flex-1">
+            <h3 class="text-4xl font-bold">10</h3>
+            <p>Years of Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="bg-muted text-foreground py-12 px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Project 1</h3>
+          <p>A brief description of Project 1.</p>
+        </div>
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Project 2</h3>
+          <p>A brief description of Project 2.</p>
+        </div>
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Project 3</h3>
+          <p>A brief description of Project 3.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="bg-muted text-foreground py-12 px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Skill 1</h3>
+          <p>Description of Skill 1.</p>
+        </div>
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Skill 2</h3>
+          <p>Description of Skill 2.</p>
+        </div>
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Skill 3</h3>
+          <p>Description of Skill 3.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-background text-foreground">
+      <p class="text-sm">&copy; 2024 BrandName. All Rights Reserved.</p>
+    </footer>
+    <script>
+      const menuBtn = document.querySelector("#mobile-nav-btn");
+      const nav = document.querySelector("#main-nav");
+
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
