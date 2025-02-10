@@ -1,12 +1,3 @@
-[submodule "ConquerBlocks/Backend/HTML"]
-	path = ConquerBlocks/Backend/HTML
-	url = https://github.com/ConquerBlocks/conquerblocks-html.git
-[submodule "ConquerBlocks/Backend/CSS"]
-	path = ConquerBlocks/Backend/CSS
-	url = https://github.com/ConquerBlocks/conquerblocks-css.git
-[submodule "ConquerBlocks/Backend/JavaScript"]
-	path = ConquerBlocks/Backend/JavaScript
-	url = https://github.com/ConquerBlocks/conquerblocks-js.git
 [submodule "ConquerBlocks/Frontend/HTML"]
 	path = ConquerBlocks/Frontend/HTML
 	url = https://github.com/ConquerBlocks/conquerblocks-html.git
