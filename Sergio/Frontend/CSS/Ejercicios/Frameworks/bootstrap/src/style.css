@@ -1,0 +1,12 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.hero-image{
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,blue,alpha);
+}
+
+.hero-section{
+  background: linear-gradient(to right, #e3f2fd, #ffccbc);
+  color: #212529;
+}
