@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrección de los ejercicios de selectores de JS</title>
+  <script type="module" src="./main.js"></script>
+<style>
+    #box {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+  </style>
+</head>
+<body>
+  <h1>Corrección de los ejercicios de eventos</h1>
+  <h2>Ejercicio 5</h2>
+  <p><a href="index.html">Atras</a></p>
+  <p>Crea una rutina que no permita que el ratón se coloque encima de una caja azul de 100 x 100 px. 
+    Cada vez que el ratón intente colocarse encima, la posición de la caja debe cambiar aleatoriamente por la página.
+</p>
+    <main>
+        <div id="box"></div>
+    </main>
+    <script>
+        let caja = document.getElementById('box');
+        caja.addEventListener('mouseover',()=>{
+            let maxWidth = window.innerWidth - 100;
+            let maxHeight = window.outerHeight - 100;
+
+            let randTop = Math.floor(Math.random()*maxHeight);
+            let randLeft = Math.floor(Math.random()*maxWidth);
+
+            caja.style.top = `${randTop}px`;
+            caja.style.left = `${randLeft}px`;
+        })
+    </script>
+</body>
+</html>

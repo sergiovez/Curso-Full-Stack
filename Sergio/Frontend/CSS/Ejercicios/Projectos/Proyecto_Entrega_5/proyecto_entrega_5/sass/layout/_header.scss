@@ -1,0 +1,115 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.header-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    position: relative;
+  
+    &__imagen {
+      padding: 0 30px 30px;
+      img {
+        width: 100%;
+        height: auto;
+        @include m.breakpoint(tablet) {
+        width: 600px;
+        }
+        @include m.breakpoint(desktop) {
+        width: 1000px;
+        }
+      }
+    }
+  
+    &__nav {
+      width: 100%;
+      background-color: v.$color-grey;
+      padding: 10px 30px;
+  
+      ul {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          color: v.$color-white;
+          text-align: center;
+  
+          a {
+            text-decoration: none;
+            color: v.$color-white;
+            font-size: 14px;
+            font-family: v.$primary-font;
+            font-weight: 500;
+            @include m.breakpoint(tablet) {
+            font-size: 18px;
+            }
+            @include m.breakpoint(desktop) {
+            font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  
+    .menu-toggle {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+  
+      span {
+        width: 20px;
+        height: 3px;
+        background-color: v.$color-white;
+        margin: 3px 0;
+        transition: 0.3s;
+        @include m.breakpoint(tablet) {
+          width: 25px;
+          height: 4px;
+        }
+        @include m.breakpoint(desktop) {
+          width: 30px;
+          height: 5px;
+        }
+      }
+    }
+  
+    .menu-desplegable {
+      display: none;
+      flex-direction: column;
+      background-color: v.$color-grey;
+      padding: 10px;
+      position: absolute;
+      top: calc(100%);
+      right: 20px;
+      z-index: 10;
+  
+      a {
+        color: v.$color-white;
+        text-decoration: none;
+        padding: 8px 0;
+        font-size: 14px;
+        font-family: v.$primary-font;
+        font-weight: 500;
+        @include m.breakpoint(tablet) {
+          font-size: 18px;
+        }
+        @include m.breakpoint(desktop) {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .menu-toggle:checked ~ .menu-desplegable {
+      display: flex;
+    }
+  }

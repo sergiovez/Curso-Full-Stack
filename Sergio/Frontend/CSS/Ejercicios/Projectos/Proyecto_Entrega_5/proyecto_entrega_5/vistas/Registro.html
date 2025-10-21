@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro</title>
+    <meta name="description" content="Formulario de registro de la academia de ConquerBlocks">
+    <meta name="keywords" content="web">
+    <meta name="author" content="@sergiovez">
+</head>
+<body>
+    <div class="container">
+        <header class="header-principal">
+            <figure class="header-principal__imagen">
+              <img src="/CSS-HTML-Proyect/img/conquer.png" alt="Logo de ConquerBlocks" width="336" height="40">
+            </figure>
+          
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+          
+            <nav class="header-principal__nav">
+              <ul>
+                <li><a href="/CSS-HTML-Proyect/index.html">Home</a></li>
+                <li><a href="/CSS-HTML-Proyect/vistas/Quienes_somos.html">Quienes somos</a></li>
+                <li><a href="/CSS-HTML-Proyect/vistas/Cursos.html">Cursos</a></li>
+                <li><a href="/CSS-HTML-Proyect/vistas/Blog.html">Blog</a></li>
+                <li>
+                  <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </li>
+              </ul>
+            </nav>
+          
+            <nav class="menu-desplegable">
+              <a href="/CSS-HTML-Proyect/vistas/Registro.html">Registro</a>
+              <a href="/CSS-HTML-Proyect/vistas/Login.html">Login</a>
+              <a href="/CSS-HTML-Proyect/vistas/Contacto.html">Contacto</a>
+            </nav>
+          </header>
+    <main>
+<section class="registro">
+  <h2 class="registro__titulo">Registro</h2>
+  <p class="registro__descripcion">Para acceder a la plataforma es necesario registrarse.</p>
+
+  <form action="" name="Registro" method="get" class="registro__form">
+    <p class="registro__campo">
+      <label for="nombre">Nombre completo:&nbsp;</label>
+      <input type="text" id="nombre" size="30" class="registro__input">
+    </p>
+    <p class="registro__campo">
+      <label for="birth">Fecha de nacimiento:&nbsp;</label>
+      <input type="date" id="birth" class="registro__input">
+    </p>
+    <p class="registro__campo">
+      <label for="email">Email:&nbsp;</label>
+      <input type="email" id="email" size="42" class="registro__input">
+    </p>
+    <p class="registro__campo">
+      <label for="direccion">Dirección:&nbsp;</label>
+      <input type="text" id="direccion" size="38" class="registro__input">
+    </p>
+    <p class="registro__campo">
+      <label for="pagina">Página web:&nbsp;</label>
+      <input type="url" id="pagina" size="36" class="registro__input">
+    </p>
+    <p class="registro__campo">
+      <label for="foto">Foto:&nbsp;</label>
+      <input type="file" id="foto" class="registro__input">
+    </p>
+    <p class="registro__campo">
+      <label for="biografia">Biografía:&nbsp;</label><br>
+      <textarea name="biografia" id="biografia" cols="46" rows="5" class="registro__textarea"></textarea>
+    </p>
+    <div class="registro__botones">
+      <button class="registro__boton">Enviar</button>
+      <input type="reset" value="Borrar formulario" class="registro__boton registro__boton--reset">
+    </div>
+  </form>
+</section>
+    </main>
+    <footer>
+        <p>&copy; Conquer Crypto 2024 - <a href="/CSS-HTML-Proyect/Aviso_Legal.html">Aviso Legal</a></p>
+    </footer>
+    <script type="module" src="../src/main.js"></script>
+    </div>
+</body>
+
+</html>

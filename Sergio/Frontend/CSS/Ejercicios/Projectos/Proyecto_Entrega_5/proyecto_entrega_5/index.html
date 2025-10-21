@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Proyectos 5 - HTML</title>
+  <meta name="description" content="Quinto proyecto de entrega de CSS con una web HTML">
+  <meta name="keywords" content="web">
+  <meta name="author" content="@sergiovez">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="principal">
+    <div class="container">
+        <header class="header-principal">
+            <figure class="header-principal__imagen">
+              <img src="img/conquer.png" alt="Logo de ConquerBlocks" width="336" height="40">
+            </figure>
+          
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+          
+            <nav class="header-principal__nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="vistas/Quienes_somos.html">Quienes somos</a></li>
+                <li><a href="vistas/Cursos.html">Cursos</a></li>
+                <li><a href="vistas/Blog.html">Blog</a></li>
+                <li>
+                  <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </li>
+              </ul>
+            </nav>
+          
+            <nav class="menu-desplegable">
+              <a href="vistas/Registro.html">Registro</a>
+              <a href="vistas/Login.html">Login</a>
+              <a href="vistas/Contacto.html">Contacto</a>
+            </nav>
+        </header>
+          
+        <main class="main-content">
+            <!-- Hero Image -->
+            <section class="hero">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="./img/web_large.png">
+                    <source media="(min-width: 600px)" srcset="./img/web_medium.png">
+                    <img src="img/web_small.png" alt="Conquer Blocks - Academia de programación" class="hero-image">
+                </picture>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="container">
+                    <h2 class="section-title">Conquer Blocks</h2>
+                    <p class="about-text">La mayor academia de programación en habla hispana, y la que cuenta con mayores garantías de empleo. Aquí podrás aprender sobre Desarrollo Full-Stack, Desarrollo Blockchain, Inteligencia Artificial y Ciberseguridad.</p>
+                    <a href="vistas/Quienes_somos.html" class="btn-primary">Conoce más sobre nosotros</a>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="video-section">
+                <div class="container">
+                    <h2 class="section-title">Nuestra metodología</h2>
+                    <div class="video-container">
+                        <video controls class="featured-video">
+                            <source src="video/Video_Conquer.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Section -->
+            <section class="courses-section">
+                <div class="container">
+                    <h2 class="section-title">Últimos cursos</h2>
+                    <div class="grid">
+                    <article class="course-card">
+                        <div class="course-badge">Más vendido</div>
+                        <img src="https://cdn.prod.website-files.com/63c2c7b1f3d9c51c32335fb0/666034277e4153d40152ef68_Full-stack-conquerblocks-p-500.jpg" alt="Curso Full-Stack" class="course-image">
+                        <div class="course-content">
+                            <h3>Máster en Desarrollo Web Full-Stack</h3>
+                            <p class="course-description">Consigue la profesión de tus sueños aprendiendo a programar desde 0.</p>
+                            <ul class="benefits-list">
+                                <li>No requiere conocimientos previos</li>
+                                <li>Garantía de empleo</li>
+                            </ul>
+                            <a href="cursos/Full-Stack.html" class="btn-secondary">Ver curso</a>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <img src="https://cdn.prod.website-files.com/63c2c7b1f3d9c51c32335fb0/6660365ef45919644a45fb87_Portraitmujer-Recuperado-p-500.jpg" alt="Curso Blockchain" class="course-image">
+                        <div class="course-content">
+                            <h3>Máster en Desarrollo Blockchain</h3>
+                            <p class="course-description">Ideal para programadores que quieren crecer profesionalmente.</p>
+                            <ul class="benefits-list">
+                                <li>Programa líder en el mercado</li>
+                                <li>Requiere conocimientos previos</li>
+                            </ul>
+                            <a href="cursos/Blockchain.html" class="btn-secondary">Ver curso</a>
+                        </div>
+                    </article>
+                    </div>
+                    <div class="section-footer">
+                        <a href="vistas/Cursos.html" class="btn-link">Ver todos los cursos →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section class="blog-section">
+                <div class="container">
+                    <h2 class="section-title">Últimas noticias</h2>
+                    <div class="grid">
+                    <article class="blog-card">
+                        <img src="https://cdn.prod.website-files.com/63c2c7b1f3d9c5a405335fd5/65e1d26a852c806c779dc0e3_grupo-programadores-ordenadores-1920x1280-p-800.jpg" alt="Blog Junior" class="blog-image">
+                        <div class="blog-content">
+                            <h3>Desarrollo Full-Stack para perfiles junior</h3>
+                            <p class="blog-excerpt">En el dinámico mundo del desarrollo web, el rol de desarrollador Full Stack ha emergido como una carrera codiciada...</p>
+                            <a href="blogs/Blog_Junior.html" class="btn-secondary">Leer más</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="https://cdn.prod.website-files.com/63c2c7b1f3d9c5a405335fd5/65e1cee58cdbf3ab08d196c2_Full-Stack-Marketer-1024x727.jpg" alt="Blog Innovadora" class="blog-image">
+                        <div class="blog-content">
+                            <h3>El Desarrollador Full-Stack Marketer</h3>
+                            <p class="blog-excerpt">En el vertiginoso mundo del desarrollo web y el marketing digital, emerge una figura revolucionaria...</p>
+                            <a href="blogs/Blog_Innovadora.html" class="btn-secondary">Leer más</a>
+                        </div>
+                    </article>
+                    </div>
+                    <div class="section-footer">
+                        <a href="vistas/Blog.html" class="btn-link">Ver todas las noticias →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+
+        <footer>
+            <p>&copy; Conquer Crypto 2024 - <a href="/CSS-HTML-Proyect/vistas/Aviso_Legal.html">Aviso Legal</a></p>
+        </footer>
+
+        <script type="module" src="src/main.js"></script>
+    </div>
+</body>
+
+</html>

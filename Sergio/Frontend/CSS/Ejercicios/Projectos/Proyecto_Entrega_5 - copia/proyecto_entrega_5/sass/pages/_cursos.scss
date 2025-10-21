@@ -1,0 +1,203 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.courses-main {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: v.$dark-text;
+}
+
+.courses-hero {
+    background: linear-gradient(135deg, v.$primary-color, v.$secondary-color);
+    color: v.$color-white;
+    text-align: center;
+    padding: 60px 0 40px;
+    
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    
+    &__subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+}
+
+@include m.breakpoint(tablet) {
+    .courses-hero {
+        padding: 80px 0 60px;
+        
+        &__title {
+            font-size: 3rem;
+        }
+        
+        &__subtitle {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@include m.breakpoint(desktop) {
+    .courses-hero {
+        &__title {
+            font-size: 4rem;
+        }
+        
+        &__subtitle {
+            font-size: 2rem;
+        }
+    }
+}
+
+.courses-intro {
+    padding: 30px 0;
+    background-color: v.$light-bg;
+    
+    &__text {
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        max-width: 800px;
+        margin: 0 auto;
+                  @include m.breakpoint(tablet) {
+            font-size: 1.4rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.courses-list {
+    .container{
+    padding: 30px 0 50px;
+    @include m.breakpoint(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    }
+}
+
+
+
+.course-card {
+    background: v.$color-white;
+    border-radius: v.$border-radius;
+    overflow: hidden;
+    box-shadow: v.$box-shadow;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px v.$color-black;
+    }
+    
+    &__header {
+        position: relative;
+    }
+    
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+    
+    &__body {
+        padding: 20px;
+    }
+    
+    &__title {
+        font-size: 1.3rem;
+        color: v.$primary-color;
+        margin-bottom: 10px;
+        font-weight: 700;
+                  @include m.breakpoint(tablet) {
+            font-size: 2rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 2.5rem;
+        }
+    }
+    
+    &__description {
+        font-size: 0.95rem;
+        color: v.$light-text;
+        margin-bottom: 15px;
+        line-height: 1.6;
+                  @include m.breakpoint(tablet) {
+            font-size: 1.2rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 1.5rem;
+        }
+    }
+    
+    &__footer {
+        padding: 0 20px 20px;
+        text-align: center;
+    }
+}
+
+@include m.breakpoint(tablet) {
+    .course-card {
+        margin-bottom: 0;
+    }
+}
+
+
+.course-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: v.$accent-color;
+    color: v.$color-grey;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.course-features {
+    list-style: none;
+    margin: 0 0 15px;
+    padding: 5px 0;
+    font-size: 0.9rem;
+        li::before {
+          content: "✔️";
+          color: v.$color-black;
+          margin-right: 8px;
+        }
+                  @include m.breakpoint(tablet) {
+            font-size: 1.2rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 1.5rem;
+        }
+}
+
+.course-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background: v.$secondary-color;
+    color: v.$color-white;
+    text-decoration: none;
+    border-radius: v.$border-radius;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: v.$secondary-color;
+    }
+              @include m.breakpoint(tablet) {
+            font-size: 1.3rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 1.6rem;
+        }
+}

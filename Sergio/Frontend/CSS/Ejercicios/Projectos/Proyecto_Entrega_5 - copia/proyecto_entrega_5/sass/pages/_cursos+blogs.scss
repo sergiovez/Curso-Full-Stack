@@ -1,0 +1,66 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.course-card, .blog-card {
+    background: v.$color-white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(68, 56, 56, 0.1);
+    
+    .course-image, .blog-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+@include m.breakpoint(tablet) {
+    .course-card, .blog-card {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+}
+
+.course-content, .blog-content {
+    padding: 20px;
+    h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: v.$primary-color;
+        @include m.breakpoint(tablet) {
+            font-size: 22px;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 26px;
+        }
+    }
+}
+
+
+@include m.breakpoint(tablet) {
+    .courses-section, .blog-section {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        
+    }
+}
+
+.grid{
+    @include m.breakpoint(tablet) {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+}
+
+.section-footer {
+    text-align: center;
+    margin-top: 20px;
+}

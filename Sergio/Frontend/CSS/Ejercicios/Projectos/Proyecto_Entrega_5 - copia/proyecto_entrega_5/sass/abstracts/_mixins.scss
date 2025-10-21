@@ -1,0 +1,72 @@
+@use 'variables' as v;
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: v.$bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: v.$bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: v.$bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: v.$bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin card-style {
+  background: v.$color-white;
+  border-radius: v.$border-radius;
+  box-shadow: v.$box-shadow;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@mixin button($bg-color: v.$color-grey, $line-color: v.$color-blue, $text-color: v.$color-white) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-color;
+  background-color: $bg-color;
+  padding: 3px 5px;
+  border-radius: 20px;
+  border-color: $line-color;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 1s ease;
+  position: relative;
+
+  &:hover{
+    color: $bg-color;
+    background-color: $line-color;
+  }
+}
+

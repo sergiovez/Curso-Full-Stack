@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrección de los ejercicios de selectores de JS</title>
+  <script type="module" src="./main.js"></script>
+  <style>
+    #box {
+        background-color: red;
+        width: 80px;
+        height: 80px;
+        position: relative;
+    }
+  </style>
+</head>
+<body>
+  <h1>Corrección de los ejercicios de eventos</h1>
+  <h2>Ejercicio 2</h2>
+  <p><a href="index.html">Atras</a></p>
+  <p>Crea una aplicación cuyo código HTML contenga únicamente una caja roja. 
+    Cada vez que el usuario pulse algunas de las teclas de los cursores 
+    (flecha arriba, flecha abajo, flecha a derecha, flecha a izquierda) 
+    la caja debe desplazarse 10 px en la dirección establecida por el cursor.</p>
+    <main>
+        <div id="box"></div>
+    </main>
+    <script>
+        let box = document.getElementById('box');
+
+        let currentTop;
+        let newTop;
+        let currentLeft;
+        let newLeft;
+
+        document.body.addEventListener("keydown", (event)=>{
+            let key = event.key;
+            switch(key){
+                case "ArrowUp":
+                    currentTop = box.style.top ? parseInt(box.style.top) : 0;
+                    newTop = currentTop - 10;
+                    box.style.top = `${newTop}px`
+                    break
+                case "ArrowDown":
+                    currentTop = box.style.top ? parseInt(box.style.top) : 0;
+                    newTop = currentTop + 10;
+                    box.style.top = `${newTop}px`
+                    break
+                case "ArrowLeft":
+                    currentLeft = box.style.left ? parseInt(box.style.left) : 0;
+                    newLeft = currentLeft - 10;
+                    box.style.left = `${newLeft}px`
+                    break
+                case "ArrowRight":
+                    currentLeft = box.style.left ? parseInt(box.style.left) : 0;
+                    newLeft = currentLeft + 10;
+                    box.style.left = `${newLeft}px`
+                    break
+                default:
+                    console.log('No has pulsado ningun cursor')
+            }
+        })
+    </script>
+</body>
+</html>

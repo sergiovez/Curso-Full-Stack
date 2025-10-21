@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrección de los ejercicios de selectores de JS</title>
+  <script type="module" src="./main.js"></script>
+<style>
+    
+  </style>
+</head>
+<body>
+  <h1>Corrección de los ejercicios de eventos</h1>
+  <h2>Ejercicio 6</h2>
+  <p><a href="index.html">Atras</a></p>
+  <p>Crea una aplicación que contenga un párrafo con mucho texto. Debajo del párrafo debe aparecer 
+    un botón por cada vocal. Al pulsar sobre una vocal, esa vocal desaparecerá del texto.
+</p>
+    <main>
+      <p id="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dicta excepturi sit adipisci necessitatibus corrupti, 
+        similique molestiae quaerat minima cumque unde neque 
+        aliquid placeat tempore maxime nesciunt, voluptates reprehenderit! Eos, non.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dicta excepturi sit adipisci necessitatibus corrupti, 
+        similique molestiae quaerat minima cumque unde neque 
+        aliquid placeat tempore maxime nesciunt, voluptates reprehenderit! Eos, non.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dicta excepturi sit adipisci necessitatibus corrupti, 
+        similique molestiae quaerat minima cumque unde neque 
+        aliquid placeat tempore maxime nesciunt, voluptates reprehenderit! Eos, non.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dicta excepturi sit adipisci necessitatibus corrupti, 
+        similique molestiae quaerat minima cumque unde neque 
+        aliquid placeat tempore maxime nesciunt, voluptates reprehenderit! Eos, non.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dicta excepturi sit adipisci necessitatibus corrupti, 
+        similique molestiae quaerat minima cumque unde neque 
+        aliquid placeat tempore maxime nesciunt, voluptates reprehenderit! Eos, non.</p>
+      <div class="buttons">
+        <button data-letter="a">A</button>
+        <button data-letter="e">E</button>
+        <button data-letter="i">I</button>
+        <button data-letter="o">O</button>
+        <button data-letter="u">U</button>
+      </div>
+    </main>
+    <script>
+        let botonesVocales = document.querySelectorAll('.buttons button');
+        for (let botonVocal of botonesVocales){
+          botonVocal.addEventListener('click',(event)=>{
+          let letra = event.target.innerText;
+          let parrafo = document.getElementById('parrafo');
+          parrafo.textContent = parrafo.textContent.replaceAll(letra.toLowerCase(),'');
+          parrafo.textContent = parrafo.textContent.replaceAll(letra,'');
+          event.target.disabled = true;
+        })
+        }
+
+    </script>
+</body>
+</html>

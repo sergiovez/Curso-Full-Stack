@@ -1,0 +1,163 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.blog-article {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: v.$dark-text;
+}
+
+.blog-hero {
+    background: linear-gradient(135deg, v.$primary-color, v.$secondary-color);
+    color: v.$color-white;
+    padding: 60px 0 40px;
+    margin-bottom: 40px;
+    
+    .blog-header {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .blog-category {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        opacity: 0.8;
+                  @include m.breakpoint(tablet) {
+            font-size: 1.5rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 2rem;
+        }
+    }
+    
+    .blog-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.3;
+                  @include m.breakpoint(tablet) {
+            font-size: 3rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 4rem;
+        }
+    }
+    
+    .blog-intro {
+        font-size: 1.1rem;
+        opacity: 0.9;
+                  @include m.breakpoint(tablet) {
+            font-size: 1.4rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 1.7rem;
+        }
+    }
+    @include m.breakpoint(tablet) {
+            padding: 80px 0 60px;
+    }
+
+    @include m.breakpoint(desktop) {
+            padding: 100px 0 80px;
+    }
+}
+
+.article-content {
+    padding: 0 0 40px;
+    
+    .article-section {
+        margin-bottom: 50px;
+    }
+    
+    .section-title {
+        color: v.$primary-color;
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid v.$primary-color;
+    }
+    
+    .article-text {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+}
+
+@include m.breakpoint(tablet) {    
+    .article-content {
+        .section-title {
+            font-size: 1.8rem;
+        }
+        
+        .article-text {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.feature-box {
+    background: v.$light-bg;
+    border-radius: v.$border-radius;
+    padding: 25px;
+    margin: 30px 0;
+    border-left: 4px solid v.$accent-color;
+    
+    .feature-title {
+        color: v.$primary-color;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    
+    .skill-item {
+        padding: 8px 0;
+        position: relative;
+        padding-left: 30px;
+        
+        &::before {
+            content: '•';
+            color: v.$accent-color;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+    }
+}
+
+.article-image {
+    margin: 40px 0;
+    text-align: center;
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: v.$border-radius;
+        box-shadow: v.$box-shadow;
+    }
+    
+    .image-caption {
+        font-size: 0.9rem;
+        color: v.$light-text;
+        font-style: italic;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+.highlight-box {
+    background: v.$primary-color;
+    border-left: 4px solid v.$primary-color;
+    padding: 20px;
+    border-radius: 0 v.$border-radius v.$border-radius 0;
+    margin: 40px 0;
+    font-size: 1.05rem;
+}

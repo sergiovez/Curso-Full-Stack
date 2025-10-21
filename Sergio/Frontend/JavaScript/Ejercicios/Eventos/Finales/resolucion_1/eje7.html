@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrección de los ejercicios de selectores de JS</title>
+  <script type="module" src="./main.js"></script>
+<style>
+    .caja{
+      height: 40px;
+      width: 10px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px; 
+      color: white;
+      font-weight: bold;
+    }
+    #caja_roja{
+      background-color: red;
+    }
+    #caja_verde{
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Corrección de los ejercicios de eventos</h1>
+  <h2>Ejercicio 7</h2>
+  <p><a href="index.html">Atras</a></p>
+  <p>Escribe un programa para simular la velocidad de pulsación de dos teclas. En pantalla aparecerán dos cajas,
+    una verde y otra roja, una debajo de otra. El alto de cada caja será de 40 px y el ancho inicial de 10 px cada una. 
+    La primera caja incrementará su ancho 5px cada vez que se pulse la tecla [a]. La segunda caja hará lo mismo 
+    cuando se pulse la tecla [ñ]. El juego termina cuando una de las cajas llega a 500 px de ancho. En ese momento 
+    deben desactivarse los eventos de ambas teclas y mostrarse un mensaje bajo las cajas que ponga «GANA VERDE» 
+    • «GANA ROJO». Se trata de calcular con qué mano eres capaz de realizar más pulsaciones.
+</p>
+    <main>
+      <div class="caja" id="caja_verde">A</div>
+      <div class="caja" id="caja_roja">Ñ</div>
+      <div id="results">Todavia no ha ganado nadie</div>
+    </main>
+    <script>
+      let caja;
+      let width;
+        document.body.addEventListener('keydown',(event)=>{
+          letra = event.key;
+          switch (letra){
+            case 'a':
+              caja = document.getElementById('caja_verde');
+              width = caja.offsetWidth;
+              width += 5;
+              caja.style.width = `${width}px`
+              if(width>=500){
+                document.getElementById('results').textContent='Ha ganado el verde';
+              }
+              break
+            case 'ñ':
+              caja = document.getElementById('caja_roja');
+              width = caja.offsetWidth;
+              width += 5;
+              caja.style.width = `${width}px`
+              if(width>=500){
+                document.getElementById('results').textContent='Ha ganado el rojo';
+              }
+              break
+            default:
+              console.log('no has pulsado ni a "a" ni la "ñ"');
+          }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+.course-detail {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: v.$dark-text;
+}
+
+.course-hero {
+    background: linear-gradient(135deg, v.$primary-color, v.$secondary-color);
+    color: v.$color-white;
+    padding: 60px 0 40px;
+    text-align: center;
+    
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.3;
+                  @include m.breakpoint(tablet) {
+            font-size: 3rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 4rem;
+        }
+    }
+    
+    &__subtitle {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+                  @include m.breakpoint(tablet) {
+            font-size: 1.4rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 1.7rem;
+        }
+        
+        strong {
+            color: v.$accent-color;
+        }
+    }
+
+    &__description{
+       @include m.breakpoint(tablet) {
+            font-size: 1.2rem;
+        }
+        @include m.breakpoint(desktop) {
+            font-size: 1.5rem;
+        }
+    }
+    @include m.breakpoint(tablet) {
+        padding: 80px 0 60px;
+
+}
+@include m.breakpoint(desktop) {
+        padding: 100px 0 80px;
+}
+}
+
+
+.course-benefits {
+    padding: 50px 0;
+    background-color: v.$light-bg;
+    
+    .section-title {
+        text-align: center;
+        font-size: 1.8rem;
+        color: v.$primary-color;
+        margin-bottom: 40px;
+        position: relative;
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: v.$secondary-color;
+            margin: 15px auto 0;
+        }
+    }
+}
+
+.benefits-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+@include m.breakpoint(tablet) {
+
+    
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+
+.benefit-card {
+    background: v.$color-white;
+    border-radius: v.$border-radius;
+    overflow: hidden;
+    box-shadow: v.$box-shadow;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px v.$color-black;
+    }
+    
+    &__image-container {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    
+    &:hover &__image {
+        transform: scale(1.05);
+    }
+    
+    &__content {
+        padding: 20px;
+    }
+    
+    &__title {
+        font-size: 1.3rem;
+        color: v.$primary-color;
+        margin-bottom: 5px;
+    }
+    
+    &__highlight {
+        color: v.$secondary-color;
+        font-style: italic;
+        font-weight: 500;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    
+    &__description {
+        color: v.$light-text;
+        line-height: 1.7;
+        
+        strong {
+            color: v.$primary-color;
+            font-weight: 600;
+        }
+    }
+}
+@include m.breakpoint(desktop) {
+
+    .benefit-card {
+        &__title {
+            font-size: 1.4rem;
+        }
+        
+        &__description {
+            font-size: 1rem;
+        }
+    }
+}
+
+.course-cta {
+    background-color: v.$primary-color;
+    color: v.$color-white;
+    padding: 60px 0;
+    text-align: center;
+    
+    .cta-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        padding: 15px 40px;
+        background: v.$accent-color;
+        color: v.$color-white;
+        text-decoration: none;
+        border-radius: v.$border-radius;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+        
+        &:hover {
+            background: v.$accent-color;
+            transform: translateY(-3px);
+        }
+    }
+    
+    .cta-guarantee {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        font-style: italic;
+    }
+}
+@include m.breakpoint(desktop) {
+
+    
+    .course-cta {
+        .cta-title {
+            font-size: 2.2rem;
+        }
+    }
+}
+

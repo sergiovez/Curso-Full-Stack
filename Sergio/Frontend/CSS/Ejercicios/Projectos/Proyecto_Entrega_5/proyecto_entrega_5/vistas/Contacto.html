@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto</title>
+    <meta name="description" content="Datos y formulario de contacto de la academia ConquerBlocks">
+    <meta name="keywords" content="web">
+    <meta name="author" content="@sergiovez">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header-principal">
+            <figure class="header-principal__imagen">
+              <img src="/CSS-HTML-Proyect/img/conquer.png" alt="Logo de ConquerBlocks" width="336" height="40">
+            </figure>
+          
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+          
+            <nav class="header-principal__nav">
+              <ul>
+                <li><a href="/CSS-HTML-Proyect/index.html">Home</a></li>
+                <li><a href="/CSS-HTML-Proyect/vistas/Quienes_somos.html">Quienes somos</a></li>
+                <li><a href="/CSS-HTML-Proyect/vistas/Cursos.html">Cursos</a></li>
+                <li><a href="/CSS-HTML-Proyect/vistas/Blog.html">Blog</a></li>
+                <li>
+                  <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </li>
+              </ul>
+            </nav>
+          
+            <nav class="menu-desplegable">
+              <a href="/CSS-HTML-Proyect/vistas/Registro.html">Registro</a>
+              <a href="/CSS-HTML-Proyect/vistas/Login.html">Login</a>
+              <a href="/CSS-HTML-Proyect/vistas/Contacto.html">Contacto</a>
+            </nav>
+          </header>
+    <main>
+        <section class="contacto">
+        <h2 class="contacto__titulo">Contacto</h2>
+        <p class="contacto__descripcion">Contacta con nosotros para lo que necesites.</p>
+
+        <section class="contacto__datos">
+            <details class="contacto__details">
+            <summary><strong>Datos de contacto</strong></summary>
+            <p>
+                ABERFURA EDUCACION Y EXCELENCIA SL. <br>
+                CIF B88563259 <br>
+                Domicilio: CL ROMA, 28028, MADRID, Madrid, ES
+            </p>
+            </details>
+        </section>
+
+        <section class="contacto__formulario">
+            <h3 class="contacto__subtitulo">Formulario de contacto</h3>
+            <form class="contacto__form" action="" method="get">
+            <div class="contacto__campo">
+                <label for="nombre">Nombre completo:</label>
+                <input class="contacto__input" type="text" id="nombre">
+            </div>
+            <div class="contacto__campo">
+                <label for="email">Email:</label>
+                <input class="contacto__input" type="email" id="email">
+            </div>
+            <div class="contacto__campo">
+                <label for="comentarios">Comentarios:</label>
+                <textarea class="contacto__textarea" id="comentarios" rows="5"></textarea>
+            </div>
+            <div class="contacto__botones">
+                <button class="contacto__boton" type="submit">Enviar</button>
+                <input class="contacto__boton contacto__boton--reset" type="reset" value="Borrar formulario">
+            </div>
+            </form>
+        </section>
+
+        <section class="contacto__mapa">
+            <h3 class="contacto__subtitulo">Mapa</h3>
+            <iframe
+            class="contacto__iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12148.207106547645!2d-3.662078046527091!3d40.42985239171926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228b43bae2a47%3A0x204d80b5bf7a68db!2sC.%20de%20Roma%2C%203%2C%20Salamanca%2C%2028028%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sch!4v1726945450809!5m2!1ses!2sch"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; Conquer Crypto 2024 - <a href="/CSS-HTML-Proyect/Aviso_Legal.html">Aviso Legal</a></p>
+    </footer>
+    <script type="module" src="../src/main.js"></script>
+    </div>
+</body>
+
+</html>

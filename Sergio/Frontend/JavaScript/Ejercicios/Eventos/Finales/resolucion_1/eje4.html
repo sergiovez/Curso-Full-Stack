@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrección de los ejercicios de selectores de JS</title>
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <h1>Corrección de los ejercicios de eventos</h1>
+  <h2>Ejercicio 4</h2>
+  <p><a href="index.html">Atras</a></p>
+  <p>Elabora un programa que vaya rellenando un párrafo de forma dinámica con todas 
+    las letras que vaya pulsando el usuario sobre cualquier elemento de la página. 
+    Al final del párrafo debes incluir un botón para limpiar el contenido del párrafo.
+</p>
+    <main>
+        <p id="dinamicP"></p>
+    </main>
+    <script>
+        let dinamicP = document.getElementById('dinamicP');
+        let deleteBoton = document.createElement('button');
+        deleteBoton.textContent = 'Borrar contenido';
+        dinamicP.appendChild(deleteBoton);
+
+        deleteBoton.addEventListener('click', (evento)=>{
+            if(dinamicP.childNodes.length === 1)
+                return false;
+            dinamicP.childNodes[0].remove();
+        })
+
+        document.body.addEventListener('keydown',(event)=>{
+            if(dinamicP.childNodes.length === 1){
+                let newTextNode = document.createTextNode(event.key);
+                dinamicP.prepend(newTextNode);
+            }
+            else{
+                dinamicP.childNodes[0].textContent += event.key;
+            }
+        })
+    </script>
+</body>
+</html>
